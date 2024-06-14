@@ -1,7 +1,42 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.action_chains import ActionChains
 import time
+
+# DATA LIST 
+
+# Jawaban Survey
+checkboxes = [
+    "harapan178", "kepuasan178", "harapan179", "kepuasan179", "harapan175", "kepuasan175",
+    "harapan176", "kepuasan176", "harapan177", "kepuasan177", "harapan184", "kepuasan184",
+    "harapan185", "kepuasan185", "harapan258", "kepuasan258", "harapan186", "kepuasan186",
+    "harapan180", "kepuasan180", "harapan254", "kepuasan254", "harapan257", "kepuasan257",
+    "harapan183", "kepuasan183", "harapan256", "kepuasan256", "harapan182", "kepuasan182",
+    "harapan181", "kepuasan181", "harapan255", "kepuasan255", "harapan233", "kepuasan233",
+    "harapan232", "kepuasan232", "harapan234", "kepuasan234", "harapan236", "kepuasan236",
+    "harapan235", "kepuasan235", "harapan238", "kepuasan238", "harapan237", "kepuasan237",
+    "harapan226", "kepuasan226", "harapan223", "kepuasan223", "harapan222", "kepuasan222",
+    "harapan225", "kepuasan225", "harapan224", "kepuasan224", "harapan253", "kepuasan253",
+    "harapan250", "kepuasan250", "harapan249", "kepuasan249", "harapan252", "kepuasan252",
+    "harapan251", "kepuasan251", "harapan201", "kepuasan201", "harapan198", "kepuasan198",
+    "harapan197", "kepuasan197", "harapan200", "kepuasan200", "harapan199", "kepuasan199", 
+    "harapan248", "kepuasan248", "harapan245", "kepuasan245", "harapan244", "kepuasan244", 
+    "harapan247", "kepuasan247", "harapan246", "kepuasan246", "harapan191", "kepuasan191", 
+    "harapan188", "kepuasan188", "harapan187", "kepuasan187", "harapan190", "kepuasan190", 
+    "harapan189", "kepuasan189", "harapan216", "kepuasan216", "harapan213", "kepuasan213", 
+    "harapan212", "kepuasan212", "harapan215", "kepuasan215", "harapan214", "kepuasan214", 
+    "harapan221", "kepuasan221", "harapan218", "kepuasan218", "harapan217", "kepuasan217", 
+    "harapan220", "kepuasan220", "harapan219", "kepuasan219", "harapan206", "kepuasan206", 
+    "harapan203", "kepuasan203", "harapan202", "kepuasan202", "harapan205", "kepuasan205", 
+    "harapan204", "kepuasan204", "harapan211", "kepuasan211", "harapan208", "kepuasan208", 
+    "harapan207", "kepuasan207", "harapan210", "kepuasan210", "harapan209", "kepuasan209", 
+    "harapan225", "kepuasan225", "harapan222", "kepuasan222", "harapan221", "kepuasan221", 
+    "harapan224", "kepuasan224", "harapan223", "kepuasan223", "harapan228", "kepuasan228", 
+    "harapan227", "kepuasan227", "harapan230", "kepuasan230", "harapan229", "kepuasan229"
+]
 
 # Inisialisasi driver Chrome
 driver = webdriver.Chrome()
@@ -79,14 +114,9 @@ sign_in__button = driver.find_element(
 sign_in__button.click()
 time.sleep(1)
 
-# Klik Navbar
-navbar = driver.find_element(By.XPATH, "/html/body/div/nav/ul[1]/li/a")
-navbar.click()
-time.sleep(1)
-
 # Klik tombol Mahasiswa Survey
 student_survey__button = driver.find_element(
-    By.XPATH, "/html/body/div/aside/div/div[4]/div/div/nav/ul/li[4]/a"
+    By.XPATH, "/html/body/div/aside/div/nav/ul/li[4]/a"
 )
 student_survey__button.click()
 time.sleep(1)
@@ -98,181 +128,31 @@ survey__button = driver.find_element(
 survey__button.click()
 time.sleep(1)
 
-# Selector XPATH array
-selectors = [
-    # '//*[@id="h1"]',
-    # '//*[@id="k4"]',
-    # '//*[@id="h1"]',
-    # '//*[@id="k4"]' 
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[1]/td[4]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[1]/td[8]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[2]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[2]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[3]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[3]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[4]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[4]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[5]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[5]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[6]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[6]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[7]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[7]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[8]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[8]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[9]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[9]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[10]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[10]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[11]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[11]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[12]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[12]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[13]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[13]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[14]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[14]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[15]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[15]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[16]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[16]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[17]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[17]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[18]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[19]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[20]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[20]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[21]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[21]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[22]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[22]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[23]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[23]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[24]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[24]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[25]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[25]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[26]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[26]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[27]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[27]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[28]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[28]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[29]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[29]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[30]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[30]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[31]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[31]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[32]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[32]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[33]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[33]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[34]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[34]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[35]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[35]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[36]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[36]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[37]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[37]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[38]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[38]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[39]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[39]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[40]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[40]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[41]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[41]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[42]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[42]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[43]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[43]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[44]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[44]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[45]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[45]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[46]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[46]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[47]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[47]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[48]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[48]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[49]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[49]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[50]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[50]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[51]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[51]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[52]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[52]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[53]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[53]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[54]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[54]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[55]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[55]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[56]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[56]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[57]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[57]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[58]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[58]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[59]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[59]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[60]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[60]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[61]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[61]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[62]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[62]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[63]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[63]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[63]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[63]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[64]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[64]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[65]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[65]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[66]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[66]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[67]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[67]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[68]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[68]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[69]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[69]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[70]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[70]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[71]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[71]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[72]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[72]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[73]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[73]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[74]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[74]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[75]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[75]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[76]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[76]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[77]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[77]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[78]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[78]/td[7]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[79]/td[3]/input',
-    '/html/body/div/div[1]/div[2]/div/div/div/div/div/div/div/form/table/tbody/tr[79]/td[7]/input',
-]
-
-# Function to click multiple elements
-def click_elements(driver, selectors):
-    for selector in selectors:
-        element = driver.find_element(By.XPATH, selector)
+for checkbox in checkboxes:
+    try:
+        element = WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CLASS_NAME, checkbox))
+        )
+        ActionChains(driver).move_to_element(element).perform()
         element.click()
+        time.sleep(0.5)
+        
+        # Auto scroll
+        driver.execute_script("window.scrollBy(0, 20);")
+        time.sleep(0.5)
+    except Exception as e:
+        print(f"Error clicking checkbox {checkbox}: {e}")
 
-# Call the function to click multiple elements
-click_elements(driver, selectors)
 
-time.sleep(10)
+# Menginput Saran
+saran = driver.find_element(By.NAME, "saran")
+saran.send_keys("CREATE BY : MUHAMAD NUR ARIF | 41523010147 | @arif_suz")
+time.sleep(1)
+
+# Submit Survey
+sumbit_survey = driver.find_element(By.NAME, "save-answer")
+sumbit_survey.click()
+time.sleep(1)
+
 # Menutup browser
 driver.quit()
