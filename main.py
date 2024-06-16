@@ -6,7 +6,14 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 
-# DATA LIST 
+# --------------------------------- DATA LIST --------------------------------- #
+
+# AKUN SIA MERCUBUANA
+username = "4152301xxx"
+password = "12345678"
+
+# WAKTU DELAY
+delay = 0.5
 
 # Jawaban Survey
 checkboxes = [
@@ -39,35 +46,39 @@ checkboxes = [
     "harapan229", "kepuasan229"
 ]
 
+saran = "SARAN UNTUK KAMPUS MERCUBUANA: \n 1. Menambahkan fasilitas yang lebih baik \n 2. Memperbaiki sistem"
+
+# --------------------------------- PROGRAM UTAMA --------------------------------- #
+
 # Inisialisasi driver Chrome
 driver = webdriver.Chrome()
 driver.implicitly_wait(5)
 
 # Mengakses URL
 driver.get("http://sia.mercubuana.ac.id")
-time.sleep(1)
+time.sleep(delay)
 
 # Enter Username SIA Mercubuana
-username = driver.find_element(By.NAME, "username")
-username.send_keys("41523010147")
-time.sleep(1)
+username_sia = driver.find_element(By.NAME, "username")
+username_sia.send_keys(username)
+time.sleep(delay)
 
 # Enter Password SIA Mercubuana
-password = driver.find_element(By.NAME, "password")
-password.send_keys("0123456789")
-time.sleep(1)
+password_sia = driver.find_element(By.NAME, "password")
+password_sia.send_keys(password)
+time.sleep(delay)
 
 # login button
 login_button = driver.find_element(
     By.XPATH, "/html/body/div/div[1]/div[2]/div[2]/div[2]/form/div[2]/input"
 )
 login_button.click()
-time.sleep(1)
+time.sleep(delay)
 
 # Closing the Pop Up
 pop_up_button = driver.find_element(By.XPATH, "/html/body/div[6]/div[1]/button")
 pop_up_button.click()
-time.sleep(1)
+time.sleep(delay)
 
 # Click the Student Details button
 detail_student_button = driver.find_element(
@@ -75,20 +86,20 @@ detail_student_button = driver.find_element(
     "/html/body/div[1]/div[1]/form/div/div[1]/div/table/tbody/tr/td[2]/div/ul/li[2]/a",
 )
 detail_student_button.click()
-time.sleep(1)
+time.sleep(delay)
 
 # Click the View KHS button
 khs_button = driver.find_element(By.XPATH, '//*[@id="khs_lst"]/a')
 khs_button.click()
-time.sleep(1)
+time.sleep(delay)
 
 # Finding the dropdown
 dropdown = Select(driver.find_element(By.XPATH, '//*[@id="periode"]'))
-time.sleep(1)
+time.sleep(delay)
 
 # Choose an option for even 2023 (Semester 2)
 dropdown.select_by_visible_text("Genap 2023")
-time.sleep(1)
+time.sleep(delay)
 
 # Login button to fill out the survey
 survey_button = driver.find_element(
@@ -96,38 +107,38 @@ survey_button = driver.find_element(
     '//*[@id="main_form"]/div/div[3]/div[2]/div[2]/table/tbody/tr[1]/td[4]/center/font/a',
 )
 survey_button.click()
-time.sleep(1)
+time.sleep(delay)
 
 # Enter Username Survey BKP Mercubuana
 username_survey = driver.find_element(By.NAME, "username")
-username_survey.send_keys("41523010147")
-time.sleep(1)
+username_survey.send_keys(username)
+time.sleep(delay)
 
 # Enter Pssword Survey BKP Mercubuana
 password_survey = driver.find_element(By.NAME, "password")
-password_survey.send_keys("0123456789")
-time.sleep(1)
+password_survey.send_keys(password)
+time.sleep(delay)
 
 # Sing In button
 sign_in__button = driver.find_element(
     By.XPATH, "/html/body/div/div[2]/div[2]/form/div[3]/div[2]/button"
 )
 sign_in__button.click()
-time.sleep(1)
+time.sleep(delay)
 
 # Student Survey button
 student_survey__button = driver.find_element(
     By.XPATH, "/html/body/div/aside/div/div[4]/div/div/nav/ul/li[4]/a"
 )
 student_survey__button.click()
-time.sleep(1)
+time.sleep(delay)
 
 # Click the Fill out Survey button
 survey__button = driver.find_element(
     By.XPATH, '//*[@id="questionsdosentbl"]/tbody/tr[1]/td[4]/a'
 )
 survey__button.click()
-time.sleep(1)
+time.sleep(delay)
 
 all_clicked = True  # Flag to check if all checkboxes are clicked
 
@@ -138,11 +149,9 @@ for checkbox in checkboxes:
         )
         ActionChains(driver).move_to_element(element).perform()
         element.click()
-        time.sleep(0.5)
         
         # Auto scroll
         driver.execute_script("window.scrollBy(0, 30);")
-        time.sleep(0.5)
         
     except Exception as e:
         print(f"Error clicking checkbox {checkbox}: {e}")
@@ -160,10 +169,8 @@ saran = driver.find_element(
     By.NAME,
     "saran"
 )
-saran.send_keys(
-    "SARAN UNTUK KAMPUS MERCUBUANA: \n 1. Menambahkan fasilitas yang lebih baik \n 2. Memperbaiki sistem"
-)
-time.sleep(1)
+saran.send_keys(saran)
+time.sleep(delay)
 
 # Submit Survey
 sumbit_survey = driver.find_element(
@@ -171,7 +178,7 @@ sumbit_survey = driver.find_element(
     "save-answer"
 )
 sumbit_survey.click()
-time.sleep(1)
+time.sleep(delay)
 
 # Closing the browser
 driver.quit()
