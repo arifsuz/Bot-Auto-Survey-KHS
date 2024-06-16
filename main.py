@@ -8,47 +8,106 @@ import time
 
 # --------------------------------- DATA LIST --------------------------------- #
 
-# AKUN SIA MERCUBUANA
-username = "4152301xxx"
-password = "12345678"
+# ========= SIA MERCUBUANA ACCOUNT ========= #
+username = "41523010XXX" # REPLACE WITH STUDENT IDENTIFICATION NUMBER (NIM)
+password = "123456789"  # REPLACE WITH YOUR SIA PASSWORD
 
-# WAKTU DELAY
-delay = 0.5
+# ========= DELAY TIME ========== #
+delay = 0.5 #CUSTOMIZE THE DELAY TIME OF EACH PROCESS YOU WANT.
 
-# Jawaban Survey
+# ========= SURVEY ANSWERS ========= #
+
+# ('TABLE FOR EXPECTATION SURVEY ANSWERS')   ('TABLE FOR SATISFACTION SURVEY ANSWERS')
+#   "#h1.harapan" = Sangat Penting           "#k1.kepuasan" = Sangat Puas
+#   "#h2.harapan" = Penting                  "#k2.kepuasan" = Puas
+#   "#h3.harapan" = Cukup Penting            "#k3.kepuasan" = Cukup Puas
+#   "#h4.harapan" = Ttdak Penting            "#k4.kepuasan" = Tidak Puas
+
 checkboxes = [
-    "harapan178", "kepuasan178", "harapan179", "kepuasan179", "harapan175", "kepuasan175",
-    "harapan176", "kepuasan176", "harapan177", "kepuasan177", "harapan184", "kepuasan184",
-    "harapan185", "kepuasan185", "harapan258", "kepuasan258", "harapan186", "kepuasan186",
-    "harapan180", "kepuasan180", "harapan254", "kepuasan254", "harapan257", "kepuasan257",
-    "harapan183", "kepuasan183", "harapan256", "kepuasan256", "harapan182", "kepuasan182",
-    "harapan181", "kepuasan181", "harapan255", "kepuasan255", "harapan233", "kepuasan233",
-    "harapan232", "kepuasan232", "harapan234", "kepuasan234", "harapan236", "kepuasan236",
-    "harapan235", "kepuasan235", "harapan238", "kepuasan238", "harapan237", "kepuasan237",
-    "harapan226", "kepuasan226", "harapan223", "kepuasan223", "harapan222", "kepuasan222",
-    "harapan225", "kepuasan225", "harapan224", "kepuasan224", "harapan253", "kepuasan253",
-    "harapan250", "kepuasan250", "harapan249", "kepuasan249", "harapan252", "kepuasan252",
-    "harapan251", "kepuasan251", "harapan201", "kepuasan201", "harapan198", "kepuasan198",
-    "harapan197", "kepuasan197", "harapan200", "kepuasan200", "harapan199", "kepuasan199", 
-    "harapan248", "kepuasan248", "harapan245", "kepuasan245", "harapan244", "kepuasan244", 
-    "harapan247", "kepuasan247", "harapan246", "kepuasan246", "harapan191", "kepuasan191", 
-    "harapan188", "kepuasan188", "harapan187", "kepuasan187", "harapan190", "kepuasan190", 
-    "harapan189", "kepuasan189", "harapan216", "kepuasan216", "harapan213", "kepuasan213", 
-    "harapan212", "kepuasan212", "harapan215", "kepuasan215", "harapan214", "kepuasan214", 
-    "harapan221", "kepuasan221", "harapan218", "kepuasan218", "harapan217", "kepuasan217", 
-    "harapan220", "kepuasan220", "harapan219", "kepuasan219", "harapan206", "kepuasan206", 
-    "harapan203", "kepuasan203", "harapan202", "kepuasan202", "harapan205", "kepuasan205", 
-    "harapan204", "kepuasan204", "harapan211", "kepuasan211", "harapan208", "kepuasan208", 
-    "harapan207", "kepuasan207", "harapan210", "kepuasan210", "harapan209", "kepuasan209", 
-    "harapan243", "kepuasan243", "harapan240", "kepuasan240", "harapan239", "kepuasan239", 
-    "harapan242", "kepuasan242", "harapan241", "kepuasan241", "harapan231", "kepuasan231", 
-    "harapan228", "kepuasan228", "harapan227", "kepuasan227", "harapan230", "kepuasan230",
-    "harapan229", "kepuasan229"
-]
+    "#h1.harapan178", "#k1.kepuasan178", # Keberagaman suku, agama, ras, gender, dan disabilitas yang harmoni di UMB.
+    "#h1.harapan179", "#k1.kepuasan179", # Sarana dan prasarana fisik maupun jaringan internet yang baik di UMB
+    "#h1.harapan175", "#k1.kepuasan175", # Kegiatan akademik berjalan kondusif di UMB.
+    "#h1.harapan176", "#k1.kepuasan176", # Kegiatan ilmiah dan pengabdian kepada masyarakat diselenggarakan secara rutin di UMB (mis: bakti sosial dan seminar) melibatkan mahasiswa di UMB
+    "#h1.harapan177", "#k1.kepuasan177", # Pelayanan tenaga kependidikan yang baik di UMB.
+    "#h1.harapan184", "#k1.kepuasan184", # Sistem perkuliahan online cepat dan mudah diakses
+    "#h1.harapan185", "#k1.kepuasan185", # Dosen menginformasikan tata tertib perkuliahan dan memberikan kecukupan bahan/materi pembelajaran di kelas
+    "#h1.harapan186", "#k1.kepuasan186", # Informasi, sarana dan prasarana dalam menunjang kegiatan yang sesuai dengan uraian jabatan serta tugas pokok dan fungsi didapatkan dengan mudah
+    "#h1.harapan180", "#k1.kepuasan180", # Ketersediaan ruang kelas dan fasilitasnya seperti komputer, internet, mic, AC, Spidol, dan projector yang berfungsi dengan baik.
+    "#h1.harapan258", "#k1.kepuasan258", # Dosen bersedia membantu mahasiswa dalam memecahkan masalah dan menanggapi pertanyaan serta komentar mahasiswa.
+    "#h1.harapan254", "#k1.kepuasan254", # Ketersediaan prosedur layanan dalam menunjang tugas pokok dan fungsi, administrasi dan layanan kebutuhan informasi secara online dan offline dengan jelas dan handal
+    "#h1.harapan257", "#k1.kepuasan257", # Layanan manajemen di UMB dilakukan dengan prima (professional) sesuai dengan prosedur
+    "#h1.harapan183", "#k1.kepuasan183", # Dosen secara konsisten memberikan materi dan penilaian secara terbuka serta terencana
+    "#h1.harapan256", "#k1.kepuasan256", # Pimpinan dan atau penanggung jawab yang berwenang menguasai dan transparan dalam menunjang keterlaksanaan tugas pokok dan fungsi
+    "#h1.harapan182", "#k1.kepuasan182", # Dosen peduli dan memotivasi mahasiswa untuk melakukan yang terbaik.
+    "#h1.harapan181", "#k1.kepuasan181", # Dosen menguasai materi yang diberikan serta bersifat adil dan tidak memihak dalam memberikan penilaian.
+    "#h1.harapan255", "#k1.kepuasan255", # Dalam pelaksanaan setiap tugas pokok dan fungsi, senantiasa mendapatkan bimbingan dan arahan manajemen dengan cepat dan tanggap terhadap permasalahan
+    "#h1.harapan233", "#k1.kepuasan233", # Layanan sarana dan pra-sarana menyiapkan ruang kelas yang baik dan menyiapkan sistem pendingin (AC) di semua kelas sehingga memberikan kenyamanan dalam proses belajar mengajar
+    "#h1.harapan232", "#k1.kepuasan232", # Layanan sarana dan pra-sarana menyiapkan ruang kelas dengan pencahayaan dan menyiapkan fasilitas audio visual serta teknologi informasi yang baik
+    "#h1.harapan234", "#k1.kepuasan234", # Layanan sarana dan pra-sarana menyiapkan ruang toilet bersih dan nyaman, tempat untuk beribadah, parkir yang tersedia, serta kantin yang bersih, rapi dan nyaman
+    "#h1.harapan236", "#k1.kepuasan236", # Staf layanan sarana dan prasarana memberikan pelayanan dengan cepat dan tanggap
+    "#h1.harapan235", "#k1.kepuasan235", # Layanan sarana dan prasarana memiliki prosedur pelayanan yang jelas dan mudah
+    "#h1.harapan238", "#k1.kepuasan238", # Staf layanan sarana dan prasarana memiliki sikap sopan, santun, dan ramah
+    "#h1.harapan237", "#k1.kepuasan237", # Staf layanan sarana dan prasarana menguasai dan transparan dalam memberikan pelayanan
+    "#h1.harapan226", "#k1.kepuasan226", # Perpustakaan sudah memenuhi ketersediaan buku wajib dan referensi yang digunakan dalam proses belajar mengajar
+    "#h1.harapan223", "#k1.kepuasan223", # Staf perpustakaan memberikan pelayanan dengan cepat dan tanggap
+    "#h1.harapan222", "#k1.kepuasan222", # Perpustakaan memiliki prosedur pelayanan yang jelas dan mudah
+    "#h1.harapan225", "#k1.kepuasan225", # Staf perpustakaan memiliki sikap sopan, santun, dan ramah
+    "#h1.harapan224", "#k1.kepuasan224", # Staf perpustakaan menguasai dan transparan dalam memberikan pelayanan
+    "#h1.harapan253", "#k1.kepuasan253", # Layanan penerimaan mahasiswa tersedia sarana dan prasarana yang baik serta tersedia saluran pengaduan terkait layanan
+    "#h1.harapan250", "#k1.kepuasan250", # Staf layanan penerimaan mahasiswa memberikan pelayanan dengan cepat dan tanggap
+    "#h1.harapan249", "#k1.kepuasan249", # Prosedur dan sistem informasi layanan penerimaan mahasiswa jelas dan handal
+    "#h1.harapan252", "#k1.kepuasan252", # Staf layanan penerimaan mahasiswa memiliki sikap sopan, santun, dan ramah
+    "#h1.harapan251", "#k1.kepuasan251", # Staf layanan penerimaan mahasiswa menguasai dan transparan dalam memberikan pelayanan
+    "#h1.harapan201", "#k1.kepuasan201", # Layanan penalaran, minat dan bakat tersedia kelengkapan sarana dan prasarana serta tersedia saluran pengaduan terkait layanan.
+    "#h1.harapan198", "#k1.kepuasan198", # Staf layanan penalaran, minat dan bakat memberikan pelayanan dengan cepat dan tanggap.
+    "#h1.harapan197", "#k1.kepuasan197", # Informasi dan prosedur layanan pengembangan minat dan bakat mahasiswa jelas dan mudah dipahami.
+    "#h1.harapan200", "#k1.kepuasan200", # Staf layanan penalaran, minat dan bakat berperilaku sopan, santun, dan ramah.
+    "#h1.harapan199", "#k1.kepuasan199", # Staf layanan penalaran, minat dan bakat menguasai dan transparan dalam memberikan pelayanan.
+    "#h1.harapan248", "#k1.kepuasan248", # Layanan Lembaga Sertifikasi Profesi tersedia kelengkapan sarana dan prasarana yang baik serta tersedia saluran pengaduan terkait layanan
+    "#h1.harapan245", "#k1.kepuasan245", # Staf Layanan Lembaga Sertifikasi Profesi memberikan pelayanan dengan cepat dan tanggap
+    "#h1.harapan244", "#k1.kepuasan244", # Prosedur dan sistem informasi Layanan Lembaga Sertifikasi Profesi jelas dan handal
+    "#h1.harapan247", "#k1.kepuasan247", # Staf Layanan Lembaga Sertifikasi Profesi memiliki sikap sopan, santun, dan ramah
+    "#h1.harapan246", "#k1.kepuasan246", # Staf Layanan Lembaga Sertifikasi Profesi menguasai dan transparan dalam memberikan pelayanan
+    "#h1.harapan191", "#k1.kepuasan191", # Layanan kewirausahaan tersedia kelengkapan sarana dan prasarana serta tersedia saluran pengaduan terkait layanan.
+    "#h1.harapan188", "#k1.kepuasan188", # Staf layanan kewirausahaan memberikan pelayanan dengan cepat dan tanggap.
+    "#h1.harapan187", "#k1.kepuasan187", # Prosedur dan sistem informasi layanan kewirausahaan mahasiswa jelas dan handal dipahami.
+    "#h1.harapan190", "#k1.kepuasan190", # Staf layanan kewirausahaan berperilaku sopan, santun, dan ramah.
+    "#h1.harapan189", "#k1.kepuasan189", # Staf layanan kewirausahaan menguasai dan transparan dalam memberikan pelayanan.
+    "#h1.harapan216", "#k1.kepuasan216", # Petugas tenaga kesehatan berperilaku sopan, santun, dan ramah
+    "#h1.harapan213", "#k1.kepuasan213", # Penanganan layanan kesehatan dilakukan oleh tenaga medis (dokter) yang handal
+    "#h1.harapan212", "#k1.kepuasan212", # Layanan kesehatan tersedia dan tersosialisasi dengan baik
+    "#h1.harapan215", "#k1.kepuasan215", # Petugas tenaga kesehatan selalu siaga pada jam operasional
+    "#h1.harapan214", "#k1.kepuasan214", # Informasi dan prosedur layanan kesehatan jelas dan mudah dipahami
+    "#h1.harapan221", "#k1.kepuasan221", # Layanan bimbingan karir tersedia kelengkapan sarana dan prasarana serta tersedia saluran pengaduan terkait layanan
+    "#h1.harapan218", "#k1.kepuasan218", # Staf layanan bimbingan karir memberikan pelayanan dengan cepat dan tanggap
+    "#h1.harapan217", "#k1.kepuasan217", # Prosedur dan sistem informasi layanan bimbingan karir jelas dan mudah dipahami
+    "#h1.harapan220", "#k1.kepuasan220", # Staf layanan bimbingan karir berperilaku sopan, santun, dan ramah	
+    "#h1.harapan219", "#k1.kepuasan219", # Staf layanan bimbingan karir menguasai dan transparan dalam memberikan pelayanan
+    "#h1.harapan206", "#k1.kepuasan206", # Tenaga ahli bimbingan konseling berperilaku sopan, santun, dan ramah
+    "#h1.harapan203", "#k1.kepuasan203", # Penanganan layanan bimbingan dan konseling ditangani oleh tenaga ahli sesuai dengan permasalahan anda
+    "#h1.harapan202", "#k1.kepuasan202", # Layanan bimbingan dan konseling tersedia dan tersosialisasi dengan baik
+    "#h1.harapan205", "#k1.kepuasan205", # Tenaga ahli bimbingan konseling memberikan pelayanan dengan cepat dan tanggap
+    "#h1.harapan204", "#k1.kepuasan204", # Informasi dan prosedur layanan bimbingan konseling jelas dan mudah dipahami
+    "#h1.harapan211", "#k1.kepuasan211", # Staf layanan beasiswa berperilaku sopan, santun, dan ramah
+    "#h1.harapan208", "#k1.kepuasan208", # Seleksi beasiswa dilakukan secara transparan
+    "#h1.harapan207", "#k1.kepuasan207", # Layanan beasiswa tersedia dan tersosialisasi dengan baik
+    "#h1.harapan210", "#k1.kepuasan210", # Staf layanan beasiswa memberikan pelayanan dengan cepat dan tanggap terhadap keluhan	
+    "#h1.harapan209", "#k1.kepuasan209", # Informasi dan prosedur layanan beasiswa jelas dan mudah dipahami
+    "#h1.harapan243", "#k1.kepuasan243", # Bagian keuangan tersedia kelengkapan sarana dan prasarana serta tersedia saluran pengaduan terkait layanan
+    "#h1.harapan240", "#k1.kepuasan240", # Staf bagian keuangan memberikan pelayanan dengan cepat dan tanggap terhadap keluhan
+    "#h1.harapan239", "#k1.kepuasan239", # Prosedur dan sistem informasi bagian keuangan bekerja dengan jelas dan handal
+    "#h1.harapan242", "#k1.kepuasan242", # Staf bagian keuangan memiliki sikap sopan, santun, dan ramah
+    "#h1.harapan241", "#k1.kepuasan241", # Staf bagian keuangan menguasai dan transparan dalam memberikan pelayanan
+    "#h1.harapan231", "#k1.kepuasan231", # Administrasi Akademik tersedia kelengkapan sarana dan prasarana serta saluran pengaduan terkait layanan
+    "#h1.harapan228", "#k1.kepuasan228", # Staf administrasi akademik memberikan pelayanan dengan cepat dan tanggap
+    "#h1.harapan227", "#k1.kepuasan227", # Prosedur dan sistem informasi administrasi akademik jelas dan mudah
+    "#h1.harapan230", "#k1.kepuasan230", # Staf administrasi Administrasi memiliki sikap sopan, santun, dan ramah
+    "#h1.harapan229", "#k1.kepuasan229"  # Staf administrasi akademik menguasai dan transparan dalam memberikan pelayanan
+] # CUSTOMIZE YOUR SURVEY ANSWERS WITH THE TABLE ABOVE VARIABLE CHECKBOXES
 
-saran = "SARAN UNTUK KAMPUS MERCUBUANA: \n 1. Menambahkan fasilitas yang lebih baik \n 2. Memperbaiki sistem"
+advice = "SARAN UNTUK KAMPUS MERCUBUANA: \n 1. Menambahkan fasilitas yang lebih baik \n 2. Memperbaiki sistem" # CUSTOMIZE YOUR ADVICE FOR THE CAMPUS
 
-# --------------------------------- PROGRAM UTAMA --------------------------------- #
+# --------------------------------- MAIN PROGRAM --------------------------------- #
 
 # Inisialisasi driver Chrome
 driver = webdriver.Chrome()
@@ -145,7 +204,7 @@ all_clicked = True  # Flag to check if all checkboxes are clicked
 for checkbox in checkboxes:
     try:
         element = WebDriverWait(driver, 10).until(
-            EC.presence_of_element_located((By.CLASS_NAME, checkbox))
+            EC.presence_of_element_located((By.CSS_SELECTOR, checkbox))
         )
         ActionChains(driver).move_to_element(element).perform()
         element.click()
@@ -163,13 +222,12 @@ if all_clicked:
 else:
     print("Some checkboxes could not be clicked.")
 
-
 # Inputting Suggestions
 saran = driver.find_element(
     By.NAME,
     "saran"
 )
-saran.send_keys(saran)
+saran.send_keys(advice)
 time.sleep(delay)
 
 # Submit Survey
