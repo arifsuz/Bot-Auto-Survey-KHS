@@ -241,6 +241,7 @@ advice = "SARAN UNTUK KAMPUS MERCUBUANA: \n 1. Menambahkan fasilitas yang lebih 
 This suggestion will be sent to all courses, but if you want to make it different in each course then you can create a new variable and adjust it to the program to fill out the survey according to the course in `MAIN PROGRAM`
 
 6. After the program has been adjusted to your needs, the next step is to run a program called `main.py`, namely by opening a terminal in Visual Studio Code by pressing the `Terminal>New Terminal` menu or you can use a shortcut on the keyboard by pressing the `CTRL key +SHIFT+`` simultaneously.
+
 Then type `python main.py` in the terminal then press ENTER to run the program.
 ## Kontribusi
 
