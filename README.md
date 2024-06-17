@@ -11,7 +11,7 @@ There are many code editor options that you can run but I strongly recommend usi
 Make sure you have installed [Python](https://www.python.org/downloads/) before, or if not you can install Python first on the official website (or you can click on the sub title above). If you have downloaded python.exe run it to perform the installation process which you can follow through the information provided. The important thing to note in installing [Python](https://www.python.org/downloads/) is to pay attention to the version because to be able to run a certain program you must use a certain version of [Python](https://www.python.org/downloads/) to be able to run the program, in this case I suggest the most recent version or at least Python 3.12 and adjust it for the operating system version you are using.
 
 ## Installation
-#### **1. [Bot-Auto-Survey-KHS]([https://pypi.org/project/selenium/](https://github.com/arifsuz/Bot-Auto-Survey-KHS))**
+#### **1. [Bot-Auto-Survey-KHS](https://github.com/arifsuz/Bot-Auto-Survey-KHS)**
 You can download this repository in zip form and you can extract it first to open and run the program, but I strongly recommend that you just clone it to make your work easier and faster.
 - Copy this command `git clone https://github.com/arifsuz/Bot-Auto-Survey-KHS.git`.
 - Paste it into the command prompt or terminal and make sure the directory where you save the project is the way you want it.
