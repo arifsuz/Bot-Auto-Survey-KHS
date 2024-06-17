@@ -125,7 +125,15 @@ checkboxes = [
 
 
 # ========= ADVICE FOR THE CAMPUS ========= #
-advice = "SARAN UNTUK KAMPUS MERCUBUANA: \n 1. Menambahkan fasilitas yang lebih baik \n 2. Memperbaiki sistem" # CUSTOMIZE YOUR ADVICE FOR THE CAMPUS
+advice1 = "SARAN UNTUK KAMPUS MERCUBUANA: \n 1. Menambahkan fasilitas yang lebih baik \n 2. Memperbaiki sistem" # CUSTOMIZE YOUR ADVICE FOR THE CAMPUS
+advice2 = "GANTI DAN SESUAIKAN DENGAN SARAN ANDA DISINI" # CUSTOMIZE YOUR ADVICE FOR THE CAMPUS
+advice3 = "GANTI DAN SESUAIKAN DENGAN SARAN ANDA DISINI" # CUSTOMIZE YOUR ADVICE FOR THE CAMPUS
+advice4 = "GANTI DAN SESUAIKAN DENGAN SARAN ANDA DISINI" # CUSTOMIZE YOUR ADVICE FOR THE CAMPUS
+advice5 = "GANTI DAN SESUAIKAN DENGAN SARAN ANDA DISINI" # CUSTOMIZE YOUR ADVICE FOR THE CAMPUS
+advice6 = "GANTI DAN SESUAIKAN DENGAN SARAN ANDA DISINI" # CUSTOMIZE YOUR ADVICE FOR THE CAMPUS
+advice7 = "GANTI DAN SESUAIKAN DENGAN SARAN ANDA DISINI" # CUSTOMIZE YOUR ADVICE FOR THE CAMPUS
+advice8 = "GANTI DAN SESUAIKAN DENGAN SARAN ANDA DISINI" # CUSTOMIZE YOUR ADVICE FOR THE CAMPUS
+advice9 = "GANTI DAN SESUAIKAN DENGAN SARAN ANDA DISINI" # CUSTOMIZE YOUR ADVICE FOR THE CAMPUS
 
 
 # ========= SCROLL BAR MOVING DISTANCE ========= #
@@ -142,8 +150,8 @@ sia = "http://sia.mercubuana.ac.id"
 survey = "https://survey-bkp.mercubuana.ac.id"
 target_username = "username"
 target_password = "password"
-login = '"/html/body/div/div[1]/div[2]/div[2]/div[2]/form/div[2]/input"'
-sign_in = '"/html/body/div/div[2]/div[2]/form/div[3]/div[2]/button"'
+login = '/html/body/div/div[1]/div[2]/div[2]/div[2]/form/div[2]/input'
+sign_in = '/html/body/div/div[2]/div[2]/form/div[3]/div[2]/button'
 
 
 # ========= FUNCTION FOR SURVEY PROCESS ========= #
@@ -222,7 +230,7 @@ survey__button.click()
 time.sleep(delay)
 
 # Run the survey process by calling the survey process function
-proses_survey(driver, checkboxes, auto_scroll, advice, delay, success, failed)
+proses_survey(driver, checkboxes, auto_scroll, advice1, delay, success, failed)
 
 # --------------- SECOND COURSE --------------- #
 # Click the Fill out Survey button
@@ -231,7 +239,7 @@ survey__button.click()
 time.sleep(delay)
 
 # Run the survey process by calling the survey process function
-proses_survey(driver, checkboxes, auto_scroll, advice, delay, success, failed)
+proses_survey(driver, checkboxes, auto_scroll, advice2, delay, success, failed)
 
 # --------------- THIRD COURSE --------------- #
 # Click the Fill out Survey button
@@ -240,7 +248,7 @@ survey__button.click()
 time.sleep(delay)
 
 # Run the survey process by calling the survey process function
-proses_survey(driver, checkboxes, auto_scroll, advice, delay, success, failed)
+proses_survey(driver, checkboxes, auto_scroll, advice3, delay, success, failed)
 
 # --------------- FOURTH COURSE --------------- #
 # Click the Fill out Survey button
@@ -249,7 +257,7 @@ survey__button.click()
 time.sleep(delay)
 
 # Run the survey process by calling the survey process function
-proses_survey(driver, checkboxes, auto_scroll, advice, delay, success, failed)
+proses_survey(driver, checkboxes, auto_scroll, advice4, delay, success, failed)
 
 # --------------- FIFTH COURSE --------------- #
 # Click the Fill out Survey button
@@ -258,7 +266,7 @@ survey__button.click()
 time.sleep(delay)
 
 # Run the survey process by calling the survey process function
-proses_survey(driver, checkboxes, auto_scroll, advice, delay, success, failed)
+proses_survey(driver, checkboxes, auto_scroll, advice5, delay, success, failed)
 
 # --------------- SIXTH COURSE --------------- #
 # Click the Fill out Survey button
@@ -267,7 +275,7 @@ survey__button.click()
 time.sleep(delay)
 
 # Run the survey process by calling the survey process function
-proses_survey(driver, checkboxes, auto_scroll, advice, delay, success, failed)
+proses_survey(driver, checkboxes, auto_scroll, advice6, delay, success, failed)
 
 # --------------- SEVENTH COURSE --------------- #
 # Click the Fill out Survey button
@@ -276,7 +284,7 @@ survey__button.click()
 time.sleep(delay)
 
 # Run the survey process by calling the survey process function
-proses_survey(driver, checkboxes, auto_scroll, advice, delay, success, failed)
+proses_survey(driver, checkboxes, auto_scroll, advice7, delay, success, failed)
 
 # --------------- EIGHTH COURSE --------------- #
 # Click the Fill out Survey button
@@ -285,7 +293,7 @@ survey__button.click()
 time.sleep(delay)
 
 # Run the survey process by calling the survey process function
-proses_survey(driver, checkboxes, auto_scroll, advice, delay, success, failed)
+proses_survey(driver, checkboxes, auto_scroll, advice8, delay, success, failed)
 
 # --------------- NINTH COURSE --------------- #
 # Click the Fill out Survey button
@@ -294,7 +302,7 @@ survey__button.click()
 time.sleep(delay)
 
 # Run the survey process by calling the survey process function
-proses_survey(driver, checkboxes, auto_scroll, advice, delay, success, failed)
+proses_survey(driver, checkboxes, auto_scroll, advice9, delay, success, failed)
 
 
 # ========= Open SIA again to view KHS ========= #
