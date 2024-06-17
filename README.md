@@ -243,7 +243,8 @@ This suggestion will be sent to all courses, but if you want to make it differen
 6. After the program has been adjusted to your needs, the next step is to run a program called `main.py`, namely by opening a terminal in Visual Studio Code by pressing the `Terminal>New Terminal` menu or you can use a shortcut on the keyboard by pressing the `CTRL key +SHIFT+`` simultaneously.
 
 Then type `python main.py` in the terminal then press ENTER to run the program.
-## Kontribusi
+
+## Contributions
 
 If you want to contribute to this project, you can follow these steps:
 
