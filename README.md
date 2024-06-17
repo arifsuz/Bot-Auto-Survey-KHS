@@ -10,18 +10,19 @@ There are many code editor options that you can run but I strongly recommend usi
 #### **2. [Python](https://www.python.org/downloads/)**
 Make sure you have installed [Python](https://www.python.org/downloads/) before, or if not you can install Python first on the official website (or you can click on the sub title above). If you have downloaded python.exe run it to perform the installation process which you can follow through the information provided. The important thing to note in installing [Python](https://www.python.org/downloads/) is to pay attention to the version because to be able to run a certain program you must use a certain version of [Python](https://www.python.org/downloads/) to be able to run the program, in this case I suggest the most recent version or at least Python 3.12 and adjust it for the operating system version you are using.
 
-#### **3. [Selenium WebDriver](https://pypi.org/project/selenium/)**
-If you are starting with desktop website or mobile website test automation, then you will be using the WebDriver API. WebDriver uses the browser automation API provided by the browser vendor to control the browser and run tests. It's as if the user is actually operating the browser. Since WebDriver does not require its API to be compiled with the application code, it is not intrusive. Therefore, you test the same application that you launch directly. WebDriver drives the browser natively, as the user does, either locally or on a remote machine using a Selenium server, marking a leap forward in terms of browser automation. Selenium WebDriver refers to the language binding and code implementation of individual browser controllers. It is usually referred to simply as WebDriver. Important notes for installing : 
-- Make sure you open the terminal in the directory you want or in a place that is in the same directory as this program.
-- then run the `pip install Selenium` in the command line or 
-- Make sure the Selenium library is installed correctly and successfully, if there are errors or problems you can visit the documentation website or can click the sub title above.
-
-## Installation 
+## Installation
+#### **1. [Bot-Auto-Survey-KHS](https://github.com/arifsuz/Bot-Auto-Survey-KHS)**
 You can download this repository in zip form and you can extract it first to open and run the program, but I strongly recommend that you just clone it to make your work easier and faster.
 - Copy this command `git clone https://github.com/arifsuz/Bot-Auto-Survey-KHS.git`.
 - Paste it into the command prompt or terminal and make sure the directory where you save the project is the way you want it.
 - After you paste it, press the enter button to run the cloning process.
-- Then open the directory with the command `cd Bot-Auto-Survey-KHS`
+- Then open the directory with the command `cd Bot-Auto-Survey-KHS`.
+
+#### **2. [Selenium WebDriver](https://pypi.org/project/selenium/)**
+If you are starting with desktop website or mobile website test automation, then you will be using the WebDriver API. WebDriver uses the browser automation API provided by the browser vendor to control the browser and run tests. It's as if the user is actually operating the browser. Since WebDriver does not require its API to be compiled with the application code, it is not intrusive. Therefore, you test the same application that you launch directly. WebDriver drives the browser natively, as the user does, either locally or on a remote machine using a Selenium server, marking a leap forward in terms of browser automation. Selenium WebDriver refers to the language binding and code implementation of individual browser controllers. It is usually referred to simply as WebDriver. Important notes for installing : 
+- Make sure you open the terminal in the directory you want or in a place that is in the same directory as this program.
+- then run the `pip install Selenium` in the command line or 
+- Make sure the Selenium library is installed correctly and successfully, if there are errors or problems you can visit the documentation website or can click the sub title above.
 
 ## Usage
 
