@@ -244,6 +244,40 @@ This suggestion will be sent to all courses, but if you want to make it differen
 
 Then type `python main.py` in the terminal then press ENTER to run the program.
 
+
+## Video Customize Guide
+### 1. **Clone Repository**
+
+https://github.com/arifsuz/Bot-Auto-Survey-KHS/assets/149920438/ed5b600c-eba3-4a84-8319-3b8ca17e0574
+
+### 2. **Install Selenium**
+
+https://github.com/arifsuz/Bot-Auto-Survey-KHS/assets/149920438/f05d31d2-2707-43b1-8df0-9df1ad0cf2e7
+
+### 3. **Customizing SIA Accounts**
+
+https://github.com/arifsuz/Bot-Auto-Survey-KHS/assets/149920438/2cb16290-4a7f-455c-acbf-4cb62e2722fb
+
+### 4. **Customizing Courses**
+
+https://github.com/arifsuz/Bot-Auto-Survey-KHS/assets/149920438/d0ea7321-f7ef-4676-ab2c-6da025d75695
+
+### 5. **Set Time Delay**
+
+https://github.com/arifsuz/Bot-Auto-Survey-KHS/assets/149920438/0daad78d-cacb-43fd-bd42-94c3d81612b5
+
+### 6. **Customizing Survey Answarey**
+
+https://github.com/arifsuz/Bot-Auto-Survey-KHS/assets/149920438/3a004d26-afcd-4790-835f-e506ac6becb8
+
+### 7. **Customizing Advice Answarey**
+
+https://github.com/arifsuz/Bot-Auto-Survey-KHS/assets/149920438/e8833de5-2b49-4388-ae49-eb567e42b12f
+
+### 8. **Running Programs**
+
+https://github.com/arifsuz/Bot-Auto-Survey-KHS/assets/149920438/08e27c3a-a8aa-497d-9183-1a28f94d5647
+
 ## Contributions
 
 If you want to contribute to this project, you can follow these steps:
