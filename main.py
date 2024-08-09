@@ -110,7 +110,7 @@ course5 = '//*[@id="questionsdosentbl"]/tbody/tr[5]/td[4]/a'
 course6 = '//*[@id="questionsdosentbl"]/tbody/tr[6]/td[4]/a' 
 course7 = '//*[@id="questionsdosentbl"]/tbody/tr[7]/td[4]/a' 
 course8 = '//*[@id="questionsdosentbl"]/tbody/tr[8]/td[4]/a' 
-course9 = '//*[@id="questionsdosentbl"]/tbody/tr[9]/td[4]/a' 
+course9 = '//*[@id="questionsdosentbl"]/tbody/tr[9]/td[4]/a'
 # If the courses taken are less than 9, please delete the line of code above. Because if you take 24 credits, the default is 9 courses.
 # =================================================================================== #
 
@@ -235,6 +235,8 @@ survey__button.click()
 time.sleep(delay)
 # Run the survey process by calling the survey process function
 proses_survey(driver, course_checkboxes, auto_scroll, advice1, delay, success, failed)
+# Auto scroll
+driver.execute_script(auto_scroll)
 # ===================================================================================  #
 
 
@@ -249,6 +251,8 @@ survey__button.click()
 time.sleep(delay)
 # Run the survey process by calling the survey process function
 proses_survey(driver, course_checkboxes, auto_scroll, advice2, delay, success, failed)
+# Auto scroll
+driver.execute_script(auto_scroll)
 # ===================================================================================  #
 
 
@@ -263,6 +267,8 @@ survey__button.click()
 time.sleep(delay)
 # Run the survey process by calling the survey process function
 proses_survey(driver, course_checkboxes, auto_scroll, advice3, delay, success, failed)
+# Auto scroll
+driver.execute_script(auto_scroll)
 # ===================================================================================  #
 
 
@@ -277,6 +283,8 @@ survey__button.click()
 time.sleep(delay)
 # Run the survey process by calling the survey process function
 proses_survey(driver, course_checkboxes, auto_scroll, advice4, delay, success, failed)
+# Auto scroll
+driver.execute_script(auto_scroll)
 # ===================================================================================  #
 
 
@@ -291,6 +299,8 @@ survey__button.click()
 time.sleep(delay)
 # Run the survey process by calling the survey process function
 proses_survey(driver, course_checkboxes, auto_scroll, advice5, delay, success, failed)
+# Auto scroll
+driver.execute_script(auto_scroll)
 # ===================================================================================  #
 
 
@@ -305,6 +315,8 @@ survey__button.click()
 time.sleep(delay)
 # Run the survey process by calling the survey process function
 proses_survey(driver, course_checkboxes, auto_scroll, advice6, delay, success, failed)
+# Auto scroll
+driver.execute_script(auto_scroll)
 # ===================================================================================  #
 
 
@@ -319,6 +331,8 @@ survey__button.click()
 time.sleep(delay)
 # Run the survey process by calling the survey process function
 proses_survey(driver, course_checkboxes, auto_scroll, advice7, delay, success, failed)
+# Auto scroll
+driver.execute_script(auto_scroll)
 # ===================================================================================  #
 
 
@@ -333,6 +347,8 @@ survey__button.click()
 time.sleep(delay)
 # Run the survey process by calling the survey process function
 proses_survey(driver, course_checkboxes, auto_scroll, advice8, delay, success, failed)
+# Auto scroll
+driver.execute_script(auto_scroll)
 # ===================================================================================  #
 
 
@@ -341,6 +357,7 @@ survey_course_button = driver.find_element(By.XPATH, course)
 survey_course_button.click()
 time.sleep(delay)
 
+driver.execute_script("window.scrollBy(0, 100)")
 # Click the Fill out Survey button
 survey__button = driver.find_element(By.XPATH, course9)
 survey__button.click()
@@ -399,9 +416,9 @@ time.sleep(delay)
 dropdown.select_by_visible_text("Genap 2023")
 time.sleep(delay)
 
-# Click the View KHS button
-view_khs = driver.find_element(By.XPATH, view_khs)
-view_khs.click()
+# # Click the View KHS button
+# view_khs = driver.find_element(By.XPATH, view_khs)
+# view_khs.click()
 
 # Leaving the browser open for 1 hour
 time.sleep(3600)
