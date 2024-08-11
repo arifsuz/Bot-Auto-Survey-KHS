@@ -229,6 +229,7 @@ survey_course_button = driver.find_element(By.XPATH, course)
 survey_course_button.click()
 time.sleep(delay)
 
+driver.execute_script("window.scrollBy(0, 100)") # set the scroll distance according to your screen dimensions
 # Click the Fill out Survey button
 survey__button = driver.find_element(By.XPATH, course1)
 survey__button.click()
@@ -245,6 +246,7 @@ survey_course_button = driver.find_element(By.XPATH, course)
 survey_course_button.click()
 time.sleep(delay)
 
+driver.execute_script("window.scrollBy(0, 150)") # set the scroll distance according to your screen dimensions
 # Click the Fill out Survey button
 survey__button = driver.find_element(By.XPATH, course2)
 survey__button.click()
@@ -261,6 +263,7 @@ survey_course_button = driver.find_element(By.XPATH, course)
 survey_course_button.click()
 time.sleep(delay)
 
+driver.execute_script("window.scrollBy(0, 200)") # set the scroll distance according to your screen dimensions
 # Click the Fill out Survey button
 survey__button = driver.find_element(By.XPATH, course3)
 survey__button.click()
@@ -277,6 +280,7 @@ survey_course_button = driver.find_element(By.XPATH, course)
 survey_course_button.click()
 time.sleep(delay)
 
+driver.execute_script("window.scrollBy(0, 200)") # set the scroll distance according to your screen dimensions
 # Click the Fill out Survey button
 survey__button = driver.find_element(By.XPATH, course4)
 survey__button.click()
@@ -293,6 +297,7 @@ survey_course_button = driver.find_element(By.XPATH, course)
 survey_course_button.click()
 time.sleep(delay)
 
+driver.execute_script("window.scrollBy(0, 250)") # set the scroll distance according to your screen dimensions
 # Click the Fill out Survey button
 survey__button = driver.find_element(By.XPATH, course5)
 survey__button.click()
@@ -309,6 +314,7 @@ survey_course_button = driver.find_element(By.XPATH, course)
 survey_course_button.click()
 time.sleep(delay)
 
+driver.execute_script("window.scrollBy(0, 250)") # set the scroll distance according to your screen dimensions
 # Click the Fill out Survey button
 survey__button = driver.find_element(By.XPATH, course6)
 survey__button.click()
@@ -325,6 +331,7 @@ survey_course_button = driver.find_element(By.XPATH, course)
 survey_course_button.click()
 time.sleep(delay)
 
+driver.execute_script("window.scrollBy(0, 300)") # set the scroll distance according to your screen dimensions
 # Click the Fill out Survey button
 survey__button = driver.find_element(By.XPATH, course7)
 survey__button.click()
@@ -341,6 +348,7 @@ survey_course_button = driver.find_element(By.XPATH, course)
 survey_course_button.click()
 time.sleep(delay)
 
+driver.execute_script("window.scrollBy(0, 300)") # set the scroll distance according to your screen dimensions
 # Click the Fill out Survey button
 survey__button = driver.find_element(By.XPATH, course8)
 survey__button.click()
@@ -357,7 +365,7 @@ survey_course_button = driver.find_element(By.XPATH, course)
 survey_course_button.click()
 time.sleep(delay)
 
-driver.execute_script("window.scrollBy(0, 100)")
+driver.execute_script("window.scrollBy(0, 300)") # set the scroll distance according to your screen dimensions
 # Click the Fill out Survey button
 survey__button = driver.find_element(By.XPATH, course9)
 survey__button.click()
