@@ -11,9 +11,9 @@ There are many code editor options that you can run but I strongly recommend usi
 Make sure you have installed [Python](https://www.python.org/downloads/) before, or if not you can install Python first on the official website (or you can click on the sub title above). If you have downloaded python.exe run it to perform the installation process which you can follow through the information provided. The important thing to note in installing [Python](https://www.python.org/downloads/) is to pay attention to the version because to be able to run a certain program you must use a certain version of [Python](https://www.python.org/downloads/) to be able to run the program, in this case I suggest the most recent version or at least Python 3.12 and adjust it for the operating system version you are using.
 
 ## Installation
-#### **1. [Bot-Auto-Survey-KHS](https://github.com/arifsuz/Bot-Auto-Survey-KHS)**
+#### **1. [Bot-Auto-Survey-KHS](https://github.com/ariftsx/Bot-Auto-Survey-KHS)**
 You can download this repository in zip form and you can extract it first to open and run the program, but I strongly recommend that you just clone it to make your work easier and faster.
-- Copy this command `git clone https://github.com/arifsuz/Bot-Auto-Survey-KHS.git`.
+- Copy this command `git clone https://github.com/ariftsx/Bot-Auto-Survey-KHS.git`.
 - Paste it into the command prompt or terminal and make sure the directory where you save the project is the way you want it.
 - After you paste it, press the enter button to run the cloning process.
 - Then open the directory with the command `cd Bot-Auto-Survey-KHS`.
@@ -260,35 +260,35 @@ Then type `python main.py` in the terminal then press ENTER to run the program.
 ## Video Customize Guide
 ### 1. **Clone Repository**
 
-https://github.com/arifsuz/Bot-Auto-Survey-KHS/assets/149920438/ed5b600c-eba3-4a84-8319-3b8ca17e0574
+https://github.com/ariftsx/Bot-Auto-Survey-KHS/assets/149920438/ed5b600c-eba3-4a84-8319-3b8ca17e0574
 
 ### 2. **Install Selenium**
 
-https://github.com/arifsuz/Bot-Auto-Survey-KHS/assets/149920438/f05d31d2-2707-43b1-8df0-9df1ad0cf2e7
+https://github.com/ariftsx/Bot-Auto-Survey-KHS/assets/149920438/f05d31d2-2707-43b1-8df0-9df1ad0cf2e7
 
 ### 3. **Customizing SIA Accounts**
 
-https://github.com/arifsuz/Bot-Auto-Survey-KHS/assets/149920438/2cb16290-4a7f-455c-acbf-4cb62e2722fb
+https://github.com/ariftsx/Bot-Auto-Survey-KHS/assets/149920438/2cb16290-4a7f-455c-acbf-4cb62e2722fb
 
 ### 4. **Customizing Courses**
 
-https://github.com/arifsuz/Bot-Auto-Survey-KHS/assets/149920438/d0ea7321-f7ef-4676-ab2c-6da025d75695
+https://github.com/ariftsx/Bot-Auto-Survey-KHS/assets/149920438/d0ea7321-f7ef-4676-ab2c-6da025d75695
 
 ### 5. **Set Time Delay**
 
-https://github.com/arifsuz/Bot-Auto-Survey-KHS/assets/149920438/0daad78d-cacb-43fd-bd42-94c3d81612b5
+https://github.com/ariftsx/Bot-Auto-Survey-KHS/assets/149920438/0daad78d-cacb-43fd-bd42-94c3d81612b5
 
 ### 6. **Customizing Survey Answarey**
 
-https://github.com/arifsuz/Bot-Auto-Survey-KHS/assets/149920438/3a004d26-afcd-4790-835f-e506ac6becb8
+https://github.com/ariftsx/Bot-Auto-Survey-KHS/assets/149920438/3a004d26-afcd-4790-835f-e506ac6becb8
 
 ### 7. **Customizing Advice Answarey**
 
-https://github.com/arifsuz/Bot-Auto-Survey-KHS/assets/149920438/e8833de5-2b49-4388-ae49-eb567e42b12f
+https://github.com/ariftsx/Bot-Auto-Survey-KHS/assets/149920438/e8833de5-2b49-4388-ae49-eb567e42b12f
 
 ### 8. **Running Programs**
 
-https://github.com/arifsuz/Bot-Auto-Survey-KHS/assets/149920438/08e27c3a-a8aa-497d-9183-1a28f94d5647
+https://github.com/ariftsx/Bot-Auto-Survey-KHS/assets/149920438/08e27c3a-a8aa-497d-9183-1a28f94d5647
 
 ## Contributions
 
@@ -320,6 +320,6 @@ Always communicate with the repository owner and project team to ensure that you
 
 ### **🔗 Link**
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ariftsx.vercel.app/)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/arifsuz)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ariftsx)
 [![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marif8/)
 [![instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/ariftsx/)
